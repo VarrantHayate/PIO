@@ -1,5 +1,7 @@
 package dicegame;
 
+import dicegame.players.PlayerComp;
+import dicegame.players.Player;
 import java.util.*;
 
 
@@ -8,7 +10,7 @@ public class Main {
    
     public static void main(String[] args) {
         Random dice = new Random();
-        PlayerComp player = new PlayerComp();
+        Player player = new PlayerComp();       //TYP: PLAYER JAKO KLASA NADRZĘDNA! + wszystkie klasy w javie dziedziczą po OBJECT, unikaj
         int target, chosen;
         
         do {            
