@@ -8,7 +8,7 @@ public class Main {
    
     public static void main(String[] args) {
         Random dice = new Random();
-        PlayerHuman player = new PlayerHuman();
+        PlayerComp player = new PlayerComp();
         int target, chosen;
         
         do {            

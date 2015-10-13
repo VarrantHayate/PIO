@@ -1,7 +1,7 @@
 package dicegame;
 import java.util.*;
 
-public class PlayerHuman {
+public class PlayerHuman extends Player {
     
     private
         Scanner odczyt = new Scanner(System.in);
