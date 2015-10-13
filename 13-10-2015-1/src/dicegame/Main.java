@@ -2,25 +2,24 @@ package dicegame;
 
 import java.util.*;
 
-//Poznaj i zrozum metodę OTWARTE ZAMKNIĘTE
-//GitHub!
 
 public class Main {
 
    
     public static void main(String[] args) {
         Random dice = new Random();
-        Player player = new Player();
-        int target;
+        PlayerHuman player = new PlayerHuman();
+        int target, chosen;
         
         do {            
             target = dice.nextInt(6)+1;
+            chosen = player.guess();
             
-            if(target!=player.guess())
-                System.out.println("Pudlo! Wylosowalem: " + target + ", Twoj wybor to: " + player.guess());
+            if(target!=chosen)
+                System.out.println("Pudlo! Wylosowalem: " + target + ", Twoj wybor to: " + chosen);
             
-        }while(target!=player.guess());
+        }while(target!=chosen);
         
-        System.out.println("Brawo! Wylosowalem: " + target + ", Twoj wybor to: " + player.guess());
+        System.out.println("Brawo! Wylosowalem: " + target + ", Twoj wybor to: " + chosen);
     };
 }
